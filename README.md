@@ -25,25 +25,22 @@
 
 ### **_Getting Started_**
 
-##### You will start in the home page, choose either to review a prior historical game or to start a new game. If you choose to review the prior game, you will be able to select the prior game to either edit or delete the game. If you choose to start a new game, you can input your strokes&used club per hole.
+#### You will start in the home page, choose either to review a prior historical game or to start a new game. If you choose to review the prior game, you will be able to select the prior game to either edit or delete the game. If you choose to start a new game, you can input your strokes&used club per hole.
 
 ---
 ### **_Project Management_**
 
-##### [ERD](): My Initial ERD.
+#### [ERD](): My Initial ERD.
 
-##### [Trello](https://trello.com/b/c63ML0GP/stroke-caddy): I will use a Trello board to outline key milestones in creating the app development.
+#### [Trello](https://trello.com/b/c63ML0GP/stroke-caddy): I will use a Trello board to outline key milestones in creating the app development.
 ---
 
 ### **_Screenshots_**
 
-##### Image 1
+#### Image 1
 
 ![Image 1]()
 
-##### Berry Example
-
-![Image 2]()
 
 ---
 
@@ -59,7 +56,7 @@
 
 ### **_Credits_**
 
-##### Image 1: 
+#### Image 1: 
 
 ---
 
