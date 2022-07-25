@@ -15,27 +15,27 @@ app.use(express.json())
 
 // Routes
 
-app.get('/Game', async (req, res) => {
-  const viewGame = await Game.findById({})
+app.get('/games', async (req, res) => {
+  const viewGame = await Game.find({}).populate('course')
   res.json(viewGame)
 })
 
-app.get('/Game/:id', async (req, res) => {
-  try {
-    const { id } = req.params
-    const viewgame = await Game.findById(id)
-    if (!viewgame) throw Error('Game not found')
-    res.json(viewgame)
-  } catch (e) {
-    console.log(e)
-    res.send('Game not found!')
-  }
-})
+// app.get('/games/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params
+//     const viewgame = await Game.findById(id)
+//     if (!viewgame) throw Error('Game not found')
+//     res.json(viewgame)
+//   } catch (e) {
+//     console.log(e)
+//     res.send('Game not found!')
+//   }
+// })
 
-app.post('/Game', async (req, res) => {
-  const createGame = await Game.create(req.body)
-  res.json(createGame)
-})
+// app.post('/games', async (req, res) => {
+//   const createGame = await Game.create(req.body)
+//   res.json(createGame)
+// })
 
 
 // Connection

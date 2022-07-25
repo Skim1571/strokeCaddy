@@ -2,8 +2,9 @@ const { Schema } = require('mongoose');
 
 const gameSchema = new Schema(
   {
-    courseId: { type: Schema.Types.ObjectId, ref: 'Course'},
-    strokeId: { type: Schema.Types.ObjectId, ref:'Stroke'}
+    // userId: { type: Schema.Types.ObjectId, ref: 'Users' },
+    courseId: { type: Schema.Types.ObjectId, ref: 'course'},
+    strokes: [{type: Schema.Types.ObjectId, ref:'Stroke'}]
   },
   { timestamps: true }
 );
