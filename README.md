@@ -16,10 +16,10 @@
 
 ### **_Technologies Used_**
 
-- Mongoose
+- MongoDB
 - Express
 - React
-- Node
+- Node.js
 
 ---
 
@@ -30,9 +30,7 @@
 ---
 ### **_Project Management_**
 
-#### [ERD](https://drive.google.com/file/d/1rjnDH8cu_Ae2aimZifSKk-cp2m09GWDi/view?usp=sharing): My Initial ERD.
-
-#### [CHD](https://drive.google.com/file/d/1Nsnb7pkHsazJwKZ-pAlQpX7nTG1VZ0oX/view?usp=sharing): My initial CHD
+#### [ERD](): My Initial ERD.
 
 #### [Trello](https://trello.com/b/c63ML0GP/stroke-caddy): I will use a Trello board to outline key milestones in creating the app development.
 ---
