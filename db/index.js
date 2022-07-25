@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 mongoose
   .connect(`mongodb+srv://skim1571:${process.env.MONGODBPASSWORD}@cluster0.rkif4yl.mongodb.net/strokeCaddy`) // if we don't have a local database named "productsDatabase" one will be created upon a successful connection
