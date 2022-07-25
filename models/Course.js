@@ -8,4 +8,4 @@ const Course = new Schema(
   { timestamps: true }
 );
 
-module.exports = Users;
+module.exports = Course;
