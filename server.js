@@ -10,6 +10,7 @@ const app = express()
 app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 
 
 //Controllers
@@ -18,8 +19,9 @@ const controller = require('./controllers/controller')
 
 
 // Routes
-app.get('/game/:id', controller.getSpecificCourse)
+app.get('/games/:id', controller.getSpecificCourse)
 app.post('/newgame', controller.createCourseDetails)
+app.get('/newgame', controller.getSpecificCourse)
 
 
 

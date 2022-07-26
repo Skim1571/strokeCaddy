@@ -10,14 +10,13 @@ const Newgame = (props) => {
   })
   const [isSubmit, setIsSubmit] = useState(false)
 
-    const postCourse = async (event) => {
-        event.preventDefault()
-        console.log(newCourse)
-        await axios.post(`${BASE_URL}/newgame`, 
-          newCourse
-        )
-        setIsSubmit(true)
-      }
+  const postCourse = async (event) => {
+      event.preventDefault()
+      await axios.post(`${BASE_URL}/newgame`, 
+        newCourse
+      )
+      setIsSubmit(true)
+    }
 
 const handleChange = (event) => {
   const { id, value } = event.target;
