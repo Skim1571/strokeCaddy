@@ -3,7 +3,6 @@ const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db');
-const { Game, Course, Stroke, Users } = require('./models');
 
 const app = express()
 
@@ -19,27 +18,10 @@ const controller = require('./controllers/controller')
 
 
 // Routes
-
 app.get('/game/:id', controller.getSpecificCourse)
-
 app.post('/newgame', controller.createCourseDetails)
 
-// app.get('/games/:id', async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const viewgame = await Game.findById(id)
-//     if (!viewgame) throw Error('Game not found')
-//     res.json(viewgame)
-//   } catch (e) {
-//     console.log(e)
-//     res.send('Game not found!')
-//   }
-// })
 
-// app.post('/games', async (req, res) => {
-//   const createGame = await Game.create(req.body)
-//   res.json(createGame)
-// })
 
 
 // Connection
