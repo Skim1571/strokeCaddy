@@ -58,8 +58,10 @@ const handleChange = (event) => {
           <div >
             <h2>Input Course Information</h2>
           </div>
-          <InputCourse onChange={handleChange} onSubmit={postUser}/>
+          <InputCourse onChange={handleChange} onSubmit={postCourse}/>
           {showDetails}
         </div>
       )
   }
+
+  export default Newgame
