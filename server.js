@@ -20,11 +20,7 @@ const controller = require('./controllers/controller')
 
 // Routes
 
-app.get('/games', async (req, res) => {
-  const viewGame = await Game.find({})
-  console.log(viewGame)
-  res.json(viewGame)
-})
+app.get('/games/:id', controller.getCourse)
 
 app.post('/newgame', controller.createCourseDetails)
 
