@@ -1,57 +1,57 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import InputCourse from '../components/InputCourse'
 const BASE_URL = 'http://localhost:3001'
 
 const Newgame = (props) => {
-  const [courseDetails, setCourseDetails] = useState({
+  const [newCourse, setNewCourse] = useState({
     courseName: '',
-    coursePar: []
+    coursePar: {}
   })
-  const [isResponse, setIsResponse] = useState(null)
-    
-      const updateCheckStatus = (update) => {
-        let newCourse = {courseName: courseDetails.courseName, coursePar: [...courseDetails.coursePar, update]}
-        setCourseDetails(newCourse)
-      }
-
-    let showDetails
+  const [isSubmit, setIsSubmit] = useState(false)
 
     const postCourse = async (event) => {
         event.preventDefault()
+        console.log(newCourse)
         await axios.post(`${BASE_URL}/newgame`, 
-          courseDetails
+          newCourse
         )
+        setIsSubmit(true)
       }
 
 const handleChange = (event) => {
   const { id, value } = event.target;
-  let newCourse = {...newCourse}
+  let courseUpdate = {...newCourse}
   switch (id) {
     case 'courseName':
-      newCourse.courseName = value;
-      setCourseDetails(newCourse);
+      courseUpdate.courseName = value;
+      setNewCourse(courseUpdate);
       break;
     case 'hole1':
-      newCourse.coursePar.hole1 = value;
-      setCourseDetails(newCourse);
+      courseUpdate.coursePar = {...courseUpdate.coursePar, hole1: value};
+      setNewCourse(courseUpdate);
       break;
     case 'hole2':
-        newCourse.coursePar.hole2 = value;
-        setCourseDetails(newCourse);
+      courseUpdate.coursePar = {...courseUpdate.coursePar, hole2: value};
+      setNewCourse(courseUpdate);
       break;
     case 'hole3':
-        newCourse.coursePar.hole3 = value;
-        setCourseDetails(newCourse);
+      courseUpdate.coursePar = {...courseUpdate.coursePar, hole3: value};
+        setNewCourse(courseUpdate);
       break;
     case 'hole4':
-        newCourse.coursePar.hole4 = value;
-        setCourseDetails(newCourse);
+      courseUpdate.coursePar = {...courseUpdate.coursePar, hole4: value};
+        setNewCourse(courseUpdate);
       break;
     default:
   }
 };
+
+let showDetails
+if(isSubmit){
+  showDetails = <p>Your course has been submitted</p>
+}
+
 
       return (
         <div className="newGameDetails">

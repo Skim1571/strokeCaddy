@@ -3,7 +3,7 @@ const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db');
-const { Game } = require('./models');
+const { Game, Course, Stroke, Users } = require('./models');
 
 const app = express()
 
@@ -14,6 +14,7 @@ app.use(express.json())
 
 
 //Controllers
+const controller = require('./controllers/controller')
 
 
 
@@ -24,6 +25,8 @@ app.get('/games', async (req, res) => {
   console.log(viewGame)
   res.json(viewGame)
 })
+
+app.post('/newgame', controller.createCourseDetails)
 
 // app.get('/games/:id', async (req, res) => {
 //   try {
