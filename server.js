@@ -13,10 +13,15 @@ app.use(logger('dev'))
 app.use(express.json())
 
 
+//Controllers
+
+
+
 // Routes
 
 app.get('/games', async (req, res) => {
-  const viewGame = await Game.find({}).populate('course')
+  const viewGame = await Game.find({})
+  console.log(viewGame)
   res.json(viewGame)
 })
 
