@@ -1,30 +1,16 @@
-import axios from 'axios'
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-const BASE_URL = 'http://localhost:3001'
-
-const GameInfo = () => {
-  const [newState, setNewState] = useState()
-
-  let { courseId } = useParams();
-  let { gameId } = useParams();
-
-  // useEffect(() => {
-  //   const getCourseDetails = async () => {
-  //     let res = await axios.get(`${BASE_URL}/${gameId}/${courseId}`);
-  //     setRideDetails(res.data);
-  //     setSelectedRide(true);
-  //   };
-  //   getRideDetails();
-  // }, [rideId]);
-
+const GameInfo = (props) => {
 
   return (
-    <div>
+    <div className='scorecard grid'>
       <h2>Game Info Here</h2>
-
-
-
+      {
+        props.course.coursePar.map((course) => (
+          <div key={course.hole} className='scorecard'>
+            <h3>Hole {course.hole}</h3>
+            <h3>Par {course.par}</h3>
+          </div>
+        ))
+      }
     </div>
   )
 }
