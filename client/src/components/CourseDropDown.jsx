@@ -18,7 +18,7 @@ const CourseDropDown = (props) => {
   let dropdown
   if (isLoaded) {
     dropdown =
-      <form>
+      <form onSubmit={props.onSubmit}>
         <select
           id="courseList"
           onChange={(event) => props.onChange(event)}
@@ -26,6 +26,7 @@ const CourseDropDown = (props) => {
           <option value="Select a course"> -- Select a Course -- </option>
           {courseDetails.map((course) => <option key={course._id} value={course._id}>{course.courseName}</option>)}
         </select>
+        <button type="submit">Submit</button>
       </form>
   }
 
