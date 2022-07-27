@@ -36,13 +36,31 @@ const createCourseDetails = async (req, res) => {
     res.json(newGame)
   }
 
-// PUT update an existing course
+  // POST create stroke
+  const createStroke = async (req, res) => {
+    const newStroke = await Stroke.create(req.body)
+    res.json(newStroke)
+  }
 
+// PUT update an existing stroke
+const updateStroke = async (req, res) => {
+  const updateStroke = await Stroke.updateOne(req.body)
+  res.json(updateStroke)
+}
+
+//DELETE 
+const deleteStroke = async (req, res) => {
+  const removeStroke = await Stroke.deleteOne(req)
+  res.json(removeStroke)
+}
 
 module.exports = {
   getCourse,
   getSpecificCourse,
   createCourseDetails,
-  createGame
+  createGame,
+  createStroke,
+  updateStroke,
+  deleteStroke
 
 }
