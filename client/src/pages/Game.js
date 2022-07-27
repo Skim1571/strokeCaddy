@@ -8,6 +8,7 @@ const Game = (props) => {
   const [courseInfo, setCourseInfo] = useState()
   const [isSubmit, setIsSubmit] = useState(false)
   const [courseHole, setCourseHole] = useState([])
+  const [strokes, setStrokes] = useState([])
 
   let { courseId } = useParams();
   let { gameId } = useParams();
@@ -20,6 +21,22 @@ const Game = (props) => {
     };
     getCourseDetails();
   }, [gameId]);
+
+useEffect(()=>{
+  const createStrokes = async () => {
+    let res = await axios.post(`${BASE_URL}/${gameId}`, {gameId: gameId});
+    console.log(res.data)
+  }
+})
+
+  useEffect(()=>{
+    const getStrokes = async () => {
+      let res = await axios.get(`${BASE_URL}/${gameId}`)
+      console.log(res.data)
+    }
+  },[strokes])
+
+
 
 let output
   if(isSubmit){
