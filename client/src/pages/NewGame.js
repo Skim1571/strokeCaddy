@@ -9,7 +9,7 @@ const Game = (props) => {
   const [selectedCourse, setSelectedCourse] = useState()
 
   const handleChange = (event) => {
-    setSelectedCourse(event.target.id);
+    setSelectedCourse(event.target.value);
   };
 
 
