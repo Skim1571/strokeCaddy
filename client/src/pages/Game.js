@@ -38,15 +38,16 @@ useEffect(()=>{
 
 
 
-let output
+let courseOutput
   if(isSubmit){
-    output = <GameInfo course={courseInfo}/>
+    courseOutput = <GameInfo course={courseInfo}/>
+
   }
 
   return(
     <div>
       <h1>This is the game screen</h1>
-      {output}
+      {courseOutput}
     </div>
   )
 }

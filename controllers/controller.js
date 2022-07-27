@@ -50,8 +50,11 @@ const createCourseDetails = async (req, res) => {
 
   // POST create stroke
   const createStroke = async (req, res) => {
-    const newStroke = await Stroke.create(req.body)
-    res.json(newStroke)
+    const newStroke = await Stroke.create({holeNum: req.body.holeNum,
+    clubUsed: req.body.clubUsed})
+    const foundGame = await Game.findById(req.body.gameId)
+    foundGame.strokes.push(newStroke._id)
+    res.json(foundGame)
   }
 
 // PUT update an existing stroke

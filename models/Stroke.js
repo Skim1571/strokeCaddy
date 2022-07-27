@@ -2,8 +2,8 @@ const { Schema } = require('mongoose');
 
 const strokeSchema = new Schema(
   {
-    gameId: {type: String, required: true},
-    stroke: { type: Array}
+    holeNum: { type: Number},
+    clubUsed: {type: String}
   },
   { timestamps: true }
 );

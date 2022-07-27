@@ -6,8 +6,11 @@ import Home from './pages/Home'
 import NewCourse from './pages/NewCourse'
 import NewGame from './pages/NewGame'
 import Game from './pages/Game'
+import { useState } from 'react'
 
 function App() {
+  const [gameData, setGameData ] = useState()
+
   return (
     <div className="App">
       <Header />
