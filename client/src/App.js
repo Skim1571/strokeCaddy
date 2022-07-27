@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import NewCourse from './pages/NewCourse'
 import NewGame from './pages/NewGame'
-import Game from './pages/NewGame'
+import Game from './pages/Game'
 
 function App() {
   return (

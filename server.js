@@ -19,13 +19,10 @@ const controller = require('./controllers/controller')
 
 
 // Routes
-app.get('/games/:id', controller.getSpecificCourse)
 app.post('/newcourse', controller.createCourseDetails)
 app.get('/newgame', controller.getCourse)
 app.post('/newgame', controller.createGame)
-
-
-
+app.get('/games/:id', controller.getSpecificCourse)
 
 // Connection
 app.listen(PORT, () => {

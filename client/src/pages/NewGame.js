@@ -22,7 +22,7 @@ const Game = (props) => {
 
   const createGame = async (event) => {
     event.preventDefault()
-    let res = await axios.post(`${BASE_URL}/newgame`);
+    let res = await axios.post(`${BASE_URL}/newgame`, {courseId: selectedCourse});
     console.log(res.data)
     setGameId(res.data._id)
     setIsCreated(true)
