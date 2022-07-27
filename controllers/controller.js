@@ -30,12 +30,19 @@ const createCourseDetails = async (req, res) => {
   res.json(newCourse)
 }
 
+  // POST create new game
+  const createGame = async (req, res) => {
+    const newGame = await Game.create(req.body)
+    res.json(newGame)
+  }
+
 // PUT update an existing course
 
 
 module.exports = {
   getCourse,
   getSpecificCourse,
-  createCourseDetails
+  createCourseDetails,
+  createGame
 
 }
