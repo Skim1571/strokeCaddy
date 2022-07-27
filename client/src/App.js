@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import NewCourse from './pages/NewCourse'
-import NewGame from './pages/NewCourse'
+import NewGame from './pages/NewGame'
 import Game from './pages/NewGame'
 
 function App() {

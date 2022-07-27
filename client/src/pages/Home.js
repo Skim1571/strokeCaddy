@@ -9,7 +9,10 @@ const Home = () => {
         <h2 className="title">Stroke Caddy</h2>
         <ul>
           <li>
-          <Link to="newgame">New Game</Link>
+          <Link to="newcourse">Create a New Course</Link>
+          </li>
+          <li>
+          <Link to="newgame">Start a New Round</Link>
           </li>
           <li>
           <Link to="historical">Historical Games</Link>

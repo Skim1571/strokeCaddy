@@ -15,8 +15,13 @@ const getSpecificCourse = async (req, res) => {
 
   // GET all course
   const getCourse = async (req, res) => {
-    const course = await Course.find({});
-    res.json(course);
+    try{
+      const course = await Course.find({});
+      res.json(course);
+    } catch (e) {
+      console.log(e);
+      res.send('Courses not found!')
+    }
   }
 
   // POST create new course

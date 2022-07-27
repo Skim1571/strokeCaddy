@@ -9,19 +9,15 @@ const Newgame = (props) => {
     coursePar: {}
   })
   const [isSubmit, setIsSubmit] = useState(false)
-
-  let navigate = useNavigate();
+let showDetails
 
 if(isSubmit){
-  const showGame = (game) => {
-    navigate(`/games/${newCourse._id}`);
-  };
+  showDetails = <p>Course has been added</p>
 }
-
 
   const postCourse = async (event) => {
       event.preventDefault()
-      await axios.post(`${BASE_URL}/newgame`, 
+      await axios.post(`${BASE_URL}/newcourse`, 
         newCourse
       )
       setIsSubmit(true)
