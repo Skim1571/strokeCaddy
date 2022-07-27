@@ -22,6 +22,7 @@ const controller = require('./controllers/controller')
 app.get('/games/:id', controller.getSpecificCourse)
 app.post('/newgame', controller.createCourseDetails)
 app.get('/newgame', controller.getSpecificCourse)
+app.get('/games', controller.getCourse)
 
 
 

@@ -22,7 +22,6 @@ const getSpecificCourse = async (req, res) => {
   // POST create new course
 const createCourseDetails = async (req, res) => {
   const newCourse = await Course.create(req.body)
-  const newGame = await Game.create()
   res.json(newCourse)
 }
 
