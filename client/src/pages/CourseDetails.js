@@ -40,8 +40,8 @@ let navigate = useNavigate()
 const removeCourse =  async () => {
     let res = await axios.delete(`${BASE_URL}/course/details/${courseId}`)
   setInitialState()
-  alert('omg this worked')
-  navigate(`/allcourse`)
+  alert(`${courseDetails.courseName} has been deleted`)
+  navigate(`/allcourses`)
   }
 
   return  (
