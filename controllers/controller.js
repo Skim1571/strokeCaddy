@@ -12,8 +12,8 @@ const getSpecificCourse = async (req, res) => {
   res.send('Specific Course not found!');
   }}
 
-  // GET all course
-  const getCourse = async (req, res) => {
+  // GET all courses
+  const getAllCourses = async (req, res) => {
     try{
       const course = await Course.find({});
       res.json(course);
@@ -63,6 +63,7 @@ const createCourseDetails = async (req, res) => {
     const newStroke = await Stroke.create({holeNum: req.body.holeNum,
     clubUsed: req.body.clubUsed})
     const foundGame = await Game.findById(req.body.gameId)
+    console.log(foundGame)
     foundGame.strokes.push(newStroke._id)
     res.json(foundGame)
   }
@@ -80,7 +81,7 @@ const deleteStroke = async (req, res) => {
 }
 
 module.exports = {
-  getCourse,
+  getAllCourses,
   getSpecificCourse,
   createCourseDetails,
   createGame,

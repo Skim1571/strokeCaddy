@@ -20,11 +20,11 @@ const controller = require('./controllers/controller')
 
 // Routes
 app.post('/newcourse', controller.createCourseDetails)
-app.get('/newgame', controller.getCourse)
+app.get('/newgame', controller.getAllCourses)
 app.post('/newgame', controller.createGame)
-app.get('/:strokes', controller.getSpecificCourse)
 app.post('/strokes', controller.createStroke)
-app.get('/historicalgames', controller.getAllGames)
+app.get('/historicalgames', controller.getAllCourses)
+app.get('/:strokes', controller.getStrokes)
 
 // Connection
 app.listen(PORT, () => {

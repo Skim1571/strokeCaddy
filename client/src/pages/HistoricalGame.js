@@ -6,17 +6,23 @@ const BASE_URL = 'http://localhost:3001'
 const HistoricalGame = (props) => {
   const [listGames, setListGames] = useState()
   const [pressedDelete, setPressedDelete] = useState(false)
-let showDetails
+  const [isSubmit, setIsSubmit] = useState(false)
+let gameOutput
 
 useEffect(()=>{
   const getGames = async () => {
     let res = await axios.get (`${BASE_URL}/historicalgames`)
-    console.log(res.data)
+    console.log(`res data1`,res.data)
     setListGames(res.data)
+    setIsSubmit(true)
   }
   getGames()
 },[])
 
+if(isSubmit){
+  gameOutput = <GameInfo games={listGames} />
+
+}
 
   // const postCourse = async (event) => {
   //     event.preventDefault()
@@ -30,7 +36,7 @@ useEffect(()=>{
           <div >
             <h2>Historical Games</h2>
           </div>
-          <GameInfo games={listGames} />
+          {gameOutput}
         </div>
       )
   }

@@ -13,35 +13,34 @@ const Game = (props) => {
   let { courseId } = useParams();
   let { gameId } = useParams();
 
-  useEffect(() => {
-    const getCourseDetails = async () => {
-      let res = await axios.get(`${BASE_URL}/${gameId}/${courseId}`);
-      setCourseInfo(res.data);
-      setIsSubmit(true)
-    };
-    getCourseDetails();
-  }, [gameId]);
+//   useEffect(() => {
+//     const getCourseDetails = async () => {
+//       let res = await axios.get(`${BASE_URL}/${gameId}/${courseId}`);
+//       setCourseInfo(res.data);
+//       setIsSubmit(true)
+//     };
+//     getCourseDetails();
+//   }, [gameId]);
 
-useEffect(()=>{
-  const createStrokes = async () => {
-    let res = await axios.post(`${BASE_URL}/${gameId}`, {gameId: gameId});
-    console.log(res.data)
-  }
-})
+// useEffect(()=>{
+//   const createStrokes = async () => {
+//     let res = await axios.post(`${BASE_URL}/${gameId}`, {gameId: gameId});
+//     console.log(res.data)
+//   }
+// })
 
-  useEffect(()=>{
-    const getStrokes = async () => {
-      let res = await axios.get(`${BASE_URL}/${gameId}`)
-      console.log(res.data)
-    }
-  },[strokes])
+//   useEffect(()=>{
+//     const getStrokes = async () => {
+//       let res = await axios.get(`${BASE_URL}/${gameId}`)
+//       console.log(res.data)
+//     }
+//   },[strokes])
 
 
 
 let courseOutput
   if(isSubmit){
     courseOutput = <CourseInfo course={courseInfo}/>
-
   }
 
   return(
