@@ -4,7 +4,6 @@ const CourseSpecific = (props) => {
     holeList.push(hole)
   })
 
-  console.log(`holeList`, holeList)
   return (
     <ul>
       {holeList.map((hole, index) => (

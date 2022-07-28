@@ -41,12 +41,68 @@ const handleChange = (event) => {
       break;
     case 'hole3':
       courseUpdate.courseInfo.push({holeNum: 3, parNum: value});
-        setNewCourse(courseUpdate);
+      setNewCourse(courseUpdate);
       break;
     case 'hole4':
       courseUpdate.courseInfo.push({holeNum: 4, parNum: value});
-        setNewCourse(courseUpdate);
+      setNewCourse(courseUpdate);
       break;
+    case 'hole5':
+      courseUpdate.courseInfo.push({holeNum: 5, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole6':
+      courseUpdate.courseInfo.push({holeNum: 6, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole7':
+      courseUpdate.courseInfo.push({holeNum: 7, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole8':
+      courseUpdate.courseInfo.push({holeNum: 8, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole9':
+      courseUpdate.courseInfo.push({holeNum: 9, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole10':
+      courseUpdate.courseInfo.push({holeNum: 10, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole11':
+      courseUpdate.courseInfo.push({holeNum: 11, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole12':
+      courseUpdate.courseInfo.push({holeNum: 12, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole13':
+      courseUpdate.courseInfo.push({holeNum: 13, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole14':
+      courseUpdate.courseInfo.push({holeNum: 14, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole15':
+      courseUpdate.courseInfo.push({holeNum: 15, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole16':
+      courseUpdate.courseInfo.push({holeNum: 16, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole17':
+      courseUpdate.courseInfo.push({holeNum: 17, parNum: value});
+      setNewCourse(courseUpdate);
+      break;
+    case 'hole18':
+      courseUpdate.courseInfo.push({holeNum: 18, parNum: value});
+      setNewCourse(courseUpdate);
+      break;      
     default:
   }
 };

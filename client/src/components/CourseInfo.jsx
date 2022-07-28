@@ -6,7 +6,6 @@ const CourseInfo = (props) => {
   const showCourse = (course) => {
     navigate(`/course/details/${course._id}`)
   }
-  console.log(props.courses)
   return (
     <div className="card-grid">
       {

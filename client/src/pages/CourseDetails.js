@@ -37,22 +37,19 @@ if(selectedCourse){
 
 let navigate = useNavigate()
 
-const removeCourse = () => {
-  const deleteCourse = async () => {
-    let res = await axios.delete(`$BASE_URL}/course/details/${courseId}`)
-    setInitialState()
+const removeCourse =  async () => {
+    let res = await axios.delete(`${BASE_URL}/course/details/${courseId}`)
+  setInitialState()
+  alert('omg this worked')
+  navigate(`/allcourse`)
   }
-  navigate(`/allcourse}`)
-}
-
-
 
   return  (
     <div className="course-content">
       <section className="image-container">
         <div>
         {nameOfCourse}
-        <button className="button" onClick={(event) => removeCourse(event)}>Press to Delete Course</button>
+        <button className="button" onClick={() => removeCourse()}>Press to Delete Course</button>
         </div>
       </section>
       <section className="details">
