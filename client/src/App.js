@@ -7,7 +7,7 @@ import NewCourse from './pages/NewCourse'
 import NewGame from './pages/NewGame'
 import Game from './pages/Game'
 import { useState } from 'react'
-import HistoricalGame from './pages/HistoricalGame'
+import AllCourses from './pages/AllCourses'
 
 function App() {
   const [gameData, setGameData ] = useState()
@@ -18,9 +18,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='newcourse' element={<NewCourse />} />
+        <Route path='/allcourses' element={<AllCourses /> } />
         <Route path='newgame' element={<NewGame />} />
-        <Route path='/:gameId/:courseId' element={<Game /> } />
-        <Route path='/historicalgames' element={<HistoricalGame /> } />
+        <Route path='/course/details/:courseId' element={<Game /> } />
       </Routes>
     </div>
   );

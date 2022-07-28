@@ -15,7 +15,7 @@ const Home = () => {
           <Link to="newgame">Start a New Round</Link>
           </li>
           <li>
-          <Link to="historicalgames">Historical Games</Link>
+          <Link to="allcourses">View Courses</Link>
           </li>
         </ul>
       </div>

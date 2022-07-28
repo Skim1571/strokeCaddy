@@ -6,22 +6,20 @@ const CourseInfo = (props) => {
   const showCourse = (course) => {
     navigate(`/course/details/${course._id}`)
   }
-
+  console.log(props.courses)
   return (
-    <div className="course-card-grid">
+    <div className="card-grid">
       {
         props.courses.map((course) => (
           <div key={course._id} className="card course-card" onClick={() => showCourse(course)}>
             <div className="info-wrapper flex-col">
               <h3>{course.courseName}</h3>
-
             </div>
           </div>
         ))
       }
     </div>
   )
-
 }
 
 export default CourseInfo

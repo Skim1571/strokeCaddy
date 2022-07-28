@@ -24,16 +24,16 @@ const getSpecificCourse = async (req, res) => {
   }
 
 // GET strokes
-const getStrokes = async (req, res) => {
-try{
-  const strokes = await Stroke.findById(gameId);
-  if (!strokes) throw Error('Strokes not found!');
-  res.json(strokes);
-} catch (e) {
-  console.log(e);
-  res.send('Specific Strokes not found!');
-  }
-}
+// const getStrokes = async (req, res) => {
+// try{
+//   const strokes = await Stroke.findById(gameId);
+//   if (!strokes) throw Error('Strokes not found!');
+//   res.json(strokes);
+// } catch (e) {
+//   console.log(e);
+//   res.send('Specific Strokes not found!');
+//   }
+// }
 
 
 
@@ -92,7 +92,6 @@ module.exports = {
   createStroke,
   updateStroke,
   deleteStroke,
-  getStrokes,
   getAllGames
 
 }

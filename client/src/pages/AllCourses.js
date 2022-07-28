@@ -3,7 +3,7 @@ import axios from 'axios'
 import CourseInfo from '../components/CourseInfo'
 const BASE_URL = 'http://localhost:3001'
 
-const HistoricalGame = (props) => {
+const AllCourses = (props) => {
   const [listCourses, setListCourses] = useState()
   const [pressedDelete, setPressedDelete] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
@@ -11,7 +11,7 @@ let courseOutput
 
 useEffect(()=>{
   const getCourses = async () => {
-    let res = await axios.get (`${BASE_URL}/historicalgames`)
+    let res = await axios.get (`${BASE_URL}/allcourses`)
     setListCourses(res.data)
     setIsSubmit(true)
   }
@@ -30,13 +30,13 @@ if(isSubmit){
   //   }
 
       return (
-        <div className="historicalGameDetails">
+        <div className="allcourses">
           <div >
-            <h2>Historical Games</h2>
+            <h2>All Courses</h2>
           </div>
-          {courseOutput}
-        </div>
+            {courseOutput}
+          </div>
       )
   }
 
-  export default HistoricalGame
+  export default AllCourses
