@@ -7,12 +7,11 @@ const HistoricalGame = (props) => {
   const [listCourses, setListCourses] = useState()
   const [pressedDelete, setPressedDelete] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
-let gameOutput
+let courseOutput
 
 useEffect(()=>{
   const getCourses = async () => {
     let res = await axios.get (`${BASE_URL}/historicalgames`)
-    console.log(`res data1`,res.data)
     setListCourses(res.data)
     setIsSubmit(true)
   }
@@ -20,8 +19,7 @@ useEffect(()=>{
 },[])
 
 if(isSubmit){
-  gameOutput = <CourseInfo courses={listCourses} />
-
+  courseOutput = <CourseInfo courses={listCourses} />
 }
 
   // const postCourse = async (event) => {
@@ -36,7 +34,7 @@ if(isSubmit){
           <div >
             <h2>Historical Games</h2>
           </div>
-          {gameOutput}
+          {courseOutput}
         </div>
       )
   }
