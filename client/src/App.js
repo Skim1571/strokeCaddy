@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import NewCourse from './pages/NewCourse'
 import NewGame from './pages/NewGame'
-import Game from './pages/Game'
+import CourseDetails from './pages/CourseDetails'
 import { useState } from 'react'
 import AllCourses from './pages/AllCourses'
 
@@ -20,7 +20,7 @@ function App() {
         <Route path='newcourse' element={<NewCourse />} />
         <Route path='/allcourses' element={<AllCourses /> } />
         <Route path='newgame' element={<NewGame />} />
-        <Route path='/course/details/:courseId' element={<Game /> } />
+        <Route path='/course/details/:courseId' element={<CourseDetails /> } />
       </Routes>
     </div>
   );

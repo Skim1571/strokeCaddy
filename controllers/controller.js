@@ -1,10 +1,10 @@
 const { Game, Course, Stroke, Users, Par } = require('../models');
 
 // GET one course
-const getSpecificCourse = async (req, res) => {
+const getCourseDetails = async (req, res) => {
   try {
   const { courseId } = req.params;
-  const specificCourse = await Course.findById(courseId);
+  const specificCourse = await Course.findById(courseId).populate('coursePar');
   if (!specificCourse) throw Error('Course not found!');
   res.json(specificCourse);
 } catch (e) {
@@ -86,12 +86,9 @@ const deleteStroke = async (req, res) => {
 
 module.exports = {
   getAllCourses,
-  getSpecificCourse,
+  getCourseDetails,
   createCourseDetails,
   createGame,
-  createStroke,
-  updateStroke,
-  deleteStroke,
   getAllGames
 
 }

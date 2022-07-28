@@ -21,6 +21,7 @@ const controller = require('./controllers/controller')
 // Routes
 app.post('/newcourse', controller.createCourseDetails)
 app.get('/allcourses', controller.getAllCourses)
+app.get('/course/details/:courseId', controller.getCourseDetails)
 // app.get('/:strokes', controller.getStrokes)
 // app.get('/newgame', controller.getAllCourses)
 // app.post('/newgame', controller.createGame)
