@@ -47,6 +47,17 @@ const createCourseDetails = async (req, res) => {
     res.json(newGame)
   }
 
+  // GET all games
+    const getAllGames = async (req, res) => {
+      try{
+        const allGames = await Game.find({});
+        res.json(allGames);
+      } catch (e) {
+        console.log(e);
+        res.send('Games not found!')
+      }
+  }
+
   // POST create stroke
   const createStroke = async (req, res) => {
     const newStroke = await Stroke.create({holeNum: req.body.holeNum,
@@ -76,6 +87,7 @@ module.exports = {
   createStroke,
   updateStroke,
   deleteStroke,
-  getStrokes
+  getStrokes,
+  getAllGames
 
 }

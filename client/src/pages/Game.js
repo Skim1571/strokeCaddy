@@ -1,6 +1,6 @@
 import { useState, useEffect  } from "react"
 import { useParams } from 'react-router-dom'
-import GameInfo from "../components/GameInfo"
+import CourseInfo from "../components/CourseInfo"
 import axios from "axios"
 const BASE_URL = 'http://localhost:3001'
 
@@ -40,7 +40,7 @@ useEffect(()=>{
 
 let courseOutput
   if(isSubmit){
-    courseOutput = <GameInfo course={courseInfo}/>
+    courseOutput = <CourseInfo course={courseInfo}/>
 
   }
 

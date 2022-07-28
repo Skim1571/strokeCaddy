@@ -24,6 +24,7 @@ app.get('/newgame', controller.getCourse)
 app.post('/newgame', controller.createGame)
 app.get('/:strokes', controller.getSpecificCourse)
 app.post('/strokes', controller.createStroke)
+app.get('/historicalgames', controller.getAllGames)
 
 // Connection
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import GameInfo from '../components/GameInfo'
+import CourseInfo from '../components/CourseInfo'
 import { Link, useNavigate } from 'react-router-dom';
 import CourseDropDown from '../components/CourseDropDown'
 const BASE_URL = 'http://localhost:3001'

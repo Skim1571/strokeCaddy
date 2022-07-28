@@ -7,6 +7,7 @@ import NewCourse from './pages/NewCourse'
 import NewGame from './pages/NewGame'
 import Game from './pages/Game'
 import { useState } from 'react'
+import HistoricalGame from './pages/HistoricalGame'
 
 function App() {
   const [gameData, setGameData ] = useState()
@@ -19,6 +20,7 @@ function App() {
         <Route path='newcourse' element={<NewCourse />} />
         <Route path='newgame' element={<NewGame />} />
         <Route path='/:gameId/:courseId' element={<Game /> } />
+        <Route path='/historicalgames' element={<HistoricalGame /> } />
       </Routes>
     </div>
   );
