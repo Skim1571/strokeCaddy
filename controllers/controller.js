@@ -23,6 +23,23 @@ const getCourseDetails = async (req, res) => {
     }
   }
 
+// DELETE selected course
+const deleteCourse = async (req, res) => {
+  try{
+    const { courseId } = req.params
+    const findPar = await Course.findById(courseId)
+    console.log(findPar.coursePar._id)
+    const removePar = await Par.findByIdAndDelete(findPar.coursePar._id)
+    console.log(removePar)
+    const removeCourse = await Course.findByIdAndDelete(courseId)
+    if (!removeCourse) throw Error('Specific course not found!');
+    res.json(removeCourse)
+  } catch (e) {
+    console.log(e);
+    res.send('Could not delete!')
+  }
+}
+
 // GET strokes
 // const getStrokes = async (req, res) => {
 // try{
@@ -89,6 +106,7 @@ module.exports = {
   getCourseDetails,
   createCourseDetails,
   createGame,
-  getAllGames
+  getAllGames,
+  deleteCourse
 
 }

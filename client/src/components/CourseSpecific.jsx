@@ -1,6 +1,6 @@
 const CourseSpecific = (props) => {
   const holeList = []
-  props.holeDetails[0].courseInfo.map((hole) => {
+  props.holeDetails.courseInfo.map((hole) => {
     holeList.push(hole)
   })
 
