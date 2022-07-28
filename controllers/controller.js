@@ -26,7 +26,6 @@ const getSpecificCourse = async (req, res) => {
 // GET strokes
 const getStrokes = async (req, res) => {
 try{
-const {gameId} = req.params;
   const strokes = await Stroke.findById(gameId);
   if (!strokes) throw Error('Strokes not found!');
   res.json(strokes);
