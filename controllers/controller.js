@@ -1,4 +1,4 @@
-const { Game, Course, Stroke, Users } = require('../models');
+const { Game, Course, Stroke, Users, Par } = require('../models');
 
 // GET one course
 const getSpecificCourse = async (req, res) => {
@@ -15,7 +15,7 @@ const getSpecificCourse = async (req, res) => {
   // GET all courses
   const getAllCourses = async (req, res) => {
     try{
-      const course = await Course.find({});
+      const course = await Course.find().populate('coursePar');
       res.json(course);
     } catch (e) {
       console.log(e);
@@ -35,11 +35,15 @@ try{
   }
 }
 
+
+
   // POST create new course
 const createCourseDetails = async (req, res) => {
-  const newCourse = await Course.create(req.body)
+  const newPar = await Par.create({courseInfo: req.body.courseInfo })
+  console.log(newPar)
+  const newCourse = await Course.create({courseName: req.body.courseName, coursePar: newPar._id})
   res.json(newCourse)
-}
+  }
 
   // POST create new game
   const createGame = async (req, res) => {

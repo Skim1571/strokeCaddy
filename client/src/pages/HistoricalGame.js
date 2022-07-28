@@ -1,26 +1,26 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import GameInfo from '../components/GameInfo'
+import CourseInfo from '../components/CourseInfo'
 const BASE_URL = 'http://localhost:3001'
 
 const HistoricalGame = (props) => {
-  const [listGames, setListGames] = useState()
+  const [listCourses, setListCourses] = useState()
   const [pressedDelete, setPressedDelete] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
 let gameOutput
 
 useEffect(()=>{
-  const getGames = async () => {
+  const getCourses = async () => {
     let res = await axios.get (`${BASE_URL}/historicalgames`)
     console.log(`res data1`,res.data)
-    setListGames(res.data)
+    setListCourses(res.data)
     setIsSubmit(true)
   }
-  getGames()
+  getCourses()
 },[])
 
 if(isSubmit){
-  gameOutput = <GameInfo games={listGames} />
+  gameOutput = <CourseInfo courses={listCourses} />
 
 }
 
