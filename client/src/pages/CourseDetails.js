@@ -32,7 +32,7 @@ const CourseDetails = () => {
   let scoreCardImg;
 
 if(selectedCourse){
-  nameOfCourse = !!courseDetails.courseName ? courseDetails.courseName : ''
+  nameOfCourse = !!courseDetails.courseName ? <h1>{courseDetails.courseName}</h1> : ''
   detailsOfCourse = !!holeDetails ? <CourseSpecific isDisabled={isDisabled} holeDetails={holeDetails} /> : ""
   scoreCardImg = !!courseDetails.courseScoreCardImage ? <img src={courseDetails.courseScoreCardImage} alt="image" /> : ""
 }

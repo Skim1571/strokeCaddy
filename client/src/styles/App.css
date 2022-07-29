@@ -6,11 +6,15 @@
 }
 
 .App {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1");
-  background-size: cover;
   display: flex;
   height: 100%;
+}
 
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title {
@@ -53,11 +57,62 @@ header nav a {
   height: 100%;
 }
 
-ul li {
+.courseSpecifics {
+  display: grid;
+  justify-content: center;
+
+}
+
+ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto;
+}
+
+.li0 {
+  grid-row: 1
+}
+
+.li1 {
+  grid-row: 2
+}
+
+.li2 {
+  grid-row: 3
+}
+
+.li3 {
+  grid-row: 4
+}
+
+.li4 {
+  grid-row: 5
+}
+
+.li5 {
+  grid-row: 6
+}
+
+.li6 {
+  grid-row: 7
+}
+
+.li7 {
+  grid-row: 8
+}
+
+.li8 {
+  grid-row: 9
+}
+
+li {
+  display: flex;
   list-style: none;
   color: #d25517;
-  font-size: 2em;
-  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: rgb(18, 77, 165, .7);
+  padding: 0px;
 }
 
 form {
@@ -150,10 +205,7 @@ button {
   flex-flow: column wrap;
 }
 
-.courseSpecifics {
-  display: flex;
-  justify-content: center;
-}
+
 
 .updatebutton {
   height: 40px;

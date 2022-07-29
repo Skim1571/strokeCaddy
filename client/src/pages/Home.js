@@ -14,6 +14,7 @@ const Home = () => {
   }
 
   return (
+    <body>
     <div className="home">
       <h2 className="title">Stroke Caddy</h2>
       <div className="home-grid">
@@ -29,6 +30,8 @@ const Home = () => {
       </div>
       </div>
     </div>
+    </body>
+
   )
 }
 
