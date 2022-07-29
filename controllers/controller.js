@@ -56,7 +56,7 @@ const deleteCourse = async (req, res) => {
 const createCourseDetails = async (req, res) => {
   const newPar = await Par.create({courseInfo: req.body.courseInfo })
   console.log(newPar)
-  const newCourse = await Course.create({courseName: req.body.courseName, coursePar: newPar._id})
+  const newCourse = await Course.create({courseName: req.body.courseName, courseScoreCardImage: req.body.courseScoreCardImage, coursePar: newPar._id})
   res.json(newCourse)
   }
 
