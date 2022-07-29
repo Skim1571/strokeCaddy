@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-let dbUrl = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : `mongodb+srv://skim1571:${process.env.MONGODBPASSWORD}@cluster0.rkif4yl.mongodb.net/strokeCaddy`
-
+let MONGODB_URI = `mongodb+srv://skim1571:${process.env.MONGODBPASSWORD}@cluster0.rkif4yl.mongodb.net/strokeCaddy`
+let  dbUrl = MONGODB_URI
 
 mongoose
   .connect(dbUrl) // if we don't have a local database named "productsDatabase" one will be created upon a successful connection
