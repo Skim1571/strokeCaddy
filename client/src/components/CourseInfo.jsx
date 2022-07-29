@@ -7,7 +7,7 @@ const CourseInfo = (props) => {
     navigate(`/course/details/${course._id}`)
   }
   return (
-    <div className="card-grid">
+    <div className="course-card-grid">
       {
         props.courses.map((course) => (
           <div key={course._id} className="card course-card" onClick={() => showCourse(course)}>

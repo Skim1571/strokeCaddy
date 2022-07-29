@@ -4,7 +4,6 @@ const Home = () => {
   const BASE_URL = 'http://localhost:3001'
 
   return (
-    <div>
       <div className="home">
         <h2 className="title">Stroke Caddy</h2>
         <ul>
@@ -16,7 +15,6 @@ const Home = () => {
           </li>
         </ul>
       </div>
-    </div>
   )
 }
 

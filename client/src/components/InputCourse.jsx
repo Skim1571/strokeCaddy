@@ -9,6 +9,8 @@ const InputCourse = (props) => {
         placeholder="Course Name"
         onChange={(event) => props.onChange(event)}
       />
+      <br />
+      <br />
       <input
         type="text"
         id="hole1"
@@ -135,7 +137,11 @@ const InputCourse = (props) => {
         placeholder="Hole 18"
         onChange={(event) => props.onChange(event)}
       />
+      <br />
+      <br />
       <button type="submit">Submit</button>
+      <br />
+      <br />
     </form>
   )
 }

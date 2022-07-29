@@ -1,38 +1,143 @@
-.App {
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Play', sans-serif;
+  color: #d25517;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1");
+  background-size: cover;
   display: flex;
-  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+.title {
+  font-size: 48px;
+  color: #d25517;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header {
+  background-color: #124da5;
+  color: #d25517;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 10em;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  display: flex;
+  background-color: #124da5;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+  width: 10%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header nav a {
+  margin: 0 1em;
+  color: #d25517;
+  font-size: 2em;
+}
+
+.home {
+  color: #d25517;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+ul li {
+  list-style: none;
+  color: #d25517;
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+form {
+  background-color: rgb(0, 0, 0, 0);
+}
+
+.newGameDetails {
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+input {
+  width: 40%;
+  color: black;
+}
+
+button {
+  padding: 0.2em 1em;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 300px;
+  max-height: 380px;
+  border-radius: 6px;
+  background-color: #1a551a;
+  color: #124da5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card .img-wrapper {
+  width: auto;
+}
+
+.card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: 20% 10%;
+  /* try 20px 10px */
+}
+
+.card .info-wrapper {
+  padding: 1em;
+}
+
+.course-card,
+.course-card-grid,
+grid {
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-gap: 1em;
+}
+
+.image-container div {
+  margin: auto;
+  width: 90%;
+}
+
+.image-container img {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+.details {
+  width: 80%;
+  margin: auto;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.space {
+  justify-content: space-between;
 }
