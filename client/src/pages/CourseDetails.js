@@ -32,7 +32,7 @@ const CourseDetails = () => {
   let scoreCardImg;
 
 if(selectedCourse){
-  nameOfCourse = !!courseDetails.courseName ? courseDetails.courseName : 'hello2'
+  nameOfCourse = !!courseDetails.courseName ? courseDetails.courseName : ''
   detailsOfCourse = !!holeDetails ? <CourseSpecific isDisabled={isDisabled} holeDetails={holeDetails} /> : ""
   scoreCardImg = !!courseDetails.courseScoreCardImage ? <img src={courseDetails.courseScoreCardImage} alt="image" /> : ""
 }
@@ -52,11 +52,11 @@ const removeCourse =  async () => {
     <div className="course-content">
       <button className="button" onClick={() => removeCourse()}>Press to Delete Course</button>
       <section className="image-container">
-      <div className="img-wrapper">
-              {scoreCardImg}
-            </div>
         <div>
-        {nameOfCourse}
+          {nameOfCourse}
+        </div>
+        <div className="img-wrapper">
+          {scoreCardImg}
         </div>
       </section>
       <section className="details">

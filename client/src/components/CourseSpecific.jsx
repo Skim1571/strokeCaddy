@@ -108,17 +108,20 @@ const CourseSpecific = (props) => {
   };
 
   return (
-    <ul>
-      <button className="button" onClick={() => update()}>{isDisabled ? "Press to update" : "Submit Changes"}</button>
-      {holeList.map((hole, index) => (
-        <li key={index}>
-          <label onChange={(event) => handleChange(event)}>Hole: {hole.holeNum}</label>
-          <label>Par:</label>
-          <input type="text" id={index} onChange={(event) => handleChange(event)} value={hole.parNum} disabled={isDisabled}></input>
-        </li>
-      )
-      )}
-    </ul>
+    <div className="courseSpecifics">
+      <button className="updatebutton" onClick={() => update()}>{isDisabled ? "Press to update" : "Submit Changes"}</button>
+      <ul>
+        {holeList.map((hole, index) => (
+          <li key={index}>
+            <label onChange={(event) => handleChange(event)}>Hole: {hole.holeNum}</label>
+            <label>Par:</label>
+            <input type="text" id={index} onChange={(event) => handleChange(event)} value={hole.parNum} disabled={isDisabled}></input>
+          </li>
+        )
+        )}
+      </ul>
+    </div>
+
   )
 }
 
