@@ -10,14 +10,18 @@
   background-size: cover;
   display: flex;
   height: 100%;
-  flex: 1;
+
 }
 
 .title {
   font-size: 48px;
   color: #d25517;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(18, 77, 165, .8);
+  border-radius: 1rem;
+  padding: 1em;
+  margin: 5% 25% 5% 25%;
+
 }
 
 header {
@@ -33,8 +37,6 @@ header {
   display: flex;
   background-color: #124da5;
   justify-content: flex-start;
-  align-items: flex-start;
-  align-self: flex-start;
   width: 10%
 }
 
@@ -47,6 +49,8 @@ header nav a {
 .home {
   color: #d25517;
   background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
 }
 
 ul li {
@@ -110,11 +114,18 @@ button {
 
 .course-card,
 .course-card-grid,
-grid {
+.grid {
   padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 320px);
-  grid-gap: 1em;
+  justify-content: space-around;
+}
+
+.home-grid {
+  padding: 2em 0;
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  justify-content: space-aroun
 }
 
 .image-container div {
@@ -127,17 +138,4 @@ grid {
   text-align: center;
   width: 100%;
   max-height: 100%;
-}
-
-.details {
-  width: 80%;
-  margin: auto;
-}
-
-.flex-row {
-  display: flex;
-}
-
-.space {
-  justify-content: space-between;
 }
