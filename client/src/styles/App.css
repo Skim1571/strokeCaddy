@@ -205,7 +205,9 @@ button {
   flex-flow: column wrap;
 }
 
-
+.home-card {
+  margin: 10px;
+}
 
 .updatebutton {
   height: 40px;

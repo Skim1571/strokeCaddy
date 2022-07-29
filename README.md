@@ -4,7 +4,7 @@
 
 ### By: Steve Kim
 
-#### [StrokeCaddy]() | [GitHub](https://github.com/Skim1571) | [LinkedIn](https://www.linkedin.com/in/steve-kim-b641541b/) | [Trello](https://trello.com/b/c63ML0GP/stroke-caddy)
+#### [StrokeCaddy](https://thawing-harbor-79663.herokuapp.com/) | [GitHub](https://github.com/Skim1571) | [LinkedIn](https://www.linkedin.com/in/steve-kim-b641541b/) | [Trello](https://trello.com/b/c63ML0GP/stroke-caddy)
 
 ---
 
@@ -48,18 +48,17 @@
 
 ### **_Future Updates_**
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Create Course Import
+- [ ] Create User Score Input
+- [ ] Create Multi-User Score Input
 
 ---
 
 ### **_Credits_**
 
-#### Image 1: 
+#### Image 1: http://www.golfbytourmiss.com/gbtm/wp-content/uploads/2020/04/1200px-PGA_Tour_logo.svg_.png
 
+#### Image2: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1)
 ---
 
 Footer

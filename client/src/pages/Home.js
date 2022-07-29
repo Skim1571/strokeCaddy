@@ -18,12 +18,12 @@ const Home = () => {
     <div className="home">
       <h2 className="title">Stroke Caddy</h2>
       <div className="home-grid">
-      <div className='card' onClick={() => createCourse()}>
+      <div className='card home-card' onClick={() => createCourse()}>
         <div className="info-wrapper">
           <h3>Create a New Course</h3>
         </div>
       </div>
-      <div className='card' onClick={() => viewCourses()}>
+      <div className='card home-card' onClick={() => viewCourses()}>
         <div className="info-wrapper">
           <h3>View Courses</h3>
         </div>
