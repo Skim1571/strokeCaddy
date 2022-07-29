@@ -216,3 +216,10 @@ button {
   position: relative;
   top: 0rem;
 }
+
+.about-body {
+  background-color: rgb(18, 77, 165, .8);
+  margin: 0 20px 0 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
