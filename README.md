@@ -10,7 +10,9 @@
 
 ### **_Description_**
 
-#### Creating a golf stroke tracking app. This app will keep track of the player's stroke and club used for that stroke. The user will be able to POST their stroke & used club. The User can also GET a prior game's score / club usage. The user will also be able to Update their score and Delete a recorded game. 
+#### Creating a golf stroke tracking app. This app will keep track of the player's stroke and club used for that stroke. The user will be able to POST their stroke & used club. The User can also GET a prior game's score / club usage. The user will also be able to Update their score and Delete a recorded game.
+
+### Phase I Complete: The App currently allows users to Create a new course. The user is then able to view all created courses and make changes or delete a course. As this app continues to develop more functionality will allow player strokes to be recorded / updated / deleted.
 
 ---
 
