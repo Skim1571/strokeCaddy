@@ -29,10 +29,12 @@ const CourseDetails = () => {
     
   let nameOfCourse;
   let detailsOfCourse;
+  let scoreCardImg;
 
 if(selectedCourse){
   nameOfCourse = !!courseDetails.courseName ? courseDetails.courseName : 'hello2'
   detailsOfCourse = !!holeDetails ? <CourseSpecific isDisabled={isDisabled} holeDetails={holeDetails} /> : ""
+  scoreCardImg = !!courseDetails.courseScoreCardImage ? <img src={courseDetails.courseScoreCardImage} alt="image" /> : ""
 }
 
 let navigate = useNavigate()
@@ -50,6 +52,9 @@ const removeCourse =  async () => {
     <div className="course-content">
       <button className="button" onClick={() => removeCourse()}>Press to Delete Course</button>
       <section className="image-container">
+      <div className="img-wrapper">
+              {scoreCardImg}
+            </div>
         <div>
         {nameOfCourse}
         </div>

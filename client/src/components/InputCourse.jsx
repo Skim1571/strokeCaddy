@@ -9,6 +9,13 @@ const InputCourse = (props) => {
         placeholder="Course Name"
         onChange={(event) => props.onChange(event)}
       />
+      <input
+        type="text"
+        id="scoreCardImage"
+        value={props.value}
+        placeholder="ScorecardImage URL"
+        onChange={(event) => props.onChange(event)}
+      />
       <br />
       <br />
       <input

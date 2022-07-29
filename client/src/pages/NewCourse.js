@@ -6,6 +6,7 @@ const BASE_URL = 'http://localhost:3001'
 const Newgame = (props) => {
   const [newCourse, setNewCourse] = useState({
     courseName: '',
+    courseScoreCardImage: '',
     courseInfo: [,,,,,,,,,,,,,,,,,]
   })
   const [isSubmit, setIsSubmit] = useState(false)
@@ -25,11 +26,15 @@ if(isSubmit){
 
 const handleChange = (event) => {
   const { id, value } = event.target;
-  let courseUpdate = {courseName: newCourse.courseName, courseInfo: [...newCourse.courseInfo]}
+  let courseUpdate = {courseName: newCourse.courseName, courseScoreCardImage: newCourse.courseScoreCardImage, courseInfo: [...newCourse.courseInfo]}
   let update
   switch (id) {
     case 'courseName':
       courseUpdate.courseName  = value;
+      setNewCourse(courseUpdate);
+      break;
+    case 'scoreCardImage':
+      courseUpdate.courseScoreCardImage  = value;
       setNewCourse(courseUpdate);
       break;
     case 'hole1':
