@@ -13,12 +13,11 @@ const CourseSpecific = (props) => {
     holeList.push(hole)
   })
 
-  let { courseId } = useParams
+  let { courseId } = useParams()
 
   const update = () => {
     if (!isDisabled) {
       const updater = async () => {
-        console.log(`this is my object`, newCourse)
         let res = await axios.put(`${BASE_URL}/course/details/${courseId}`,
           newCourse)
       }
@@ -31,7 +30,6 @@ const CourseSpecific = (props) => {
     const { id, value } = event.target
     const numValue = parseInt(value)
     let courseUpdate = { _id: newCourse._id, courseInfo: [...newCourse.courseInfo] }
-    console.log(`id`, id)
     switch (id) {
       case '0':
         courseUpdate.courseInfo.splice(0, 1, { holeNum: 1, parNum: numValue });
