@@ -12,9 +12,6 @@ const Home = () => {
           <Link to="newcourse">Create a New Course</Link>
           </li>
           <li>
-          <Link to="newgame">Start a New Round</Link>
-          </li>
-          <li>
           <Link to="allcourses">View Courses</Link>
           </li>
         </ul>
