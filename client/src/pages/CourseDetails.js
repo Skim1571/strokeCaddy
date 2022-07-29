@@ -14,8 +14,8 @@ const CourseDetails = () => {
     setCourseDetails()
     setHoleDetails()
   }
-
   let { courseId } = useParams()
+  let isDisabled = true
   
   useEffect(() =>  {
     const getCourseDetails = async () => {
@@ -32,7 +32,7 @@ const CourseDetails = () => {
 
 if(selectedCourse){
   nameOfCourse = !!courseDetails.courseName ? courseDetails.courseName : 'hello2'
-  detailsOfCourse = !!holeDetails ? <CourseSpecific holeDetails={holeDetails} /> : ""
+  detailsOfCourse = !!holeDetails ? <CourseSpecific isDisabled={isDisabled} holeDetails={holeDetails} /> : ""
 }
 
 let navigate = useNavigate()
@@ -46,18 +46,12 @@ const removeCourse =  async () => {
   }
   }
 
-
-  const updateName = async () => {
-    let res = await axios.put(`${BASE_URL}/course/details/${courseId}`)
-  }
-
   return  (
     <div className="course-content">
       <button className="button" onClick={() => removeCourse()}>Press to Delete Course</button>
       <section className="image-container">
         <div>
         {nameOfCourse}
-        <button className="button" onClick={() => updateName()}>Press to update</button>
         </div>
       </section>
       <section className="details">
