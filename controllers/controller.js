@@ -42,13 +42,13 @@ const deleteCourse = async (req, res) => {
   const updateCourseDetails = async (req, res) => {
     try{
       const { courseId } = req.params
-      const findCourse = await Course.findById(courseId)
-      const changeName = await Course.findByIdAndUpdate({_id: courseId}, req.body, { new: true} )
-      if (!findCourse) throw Error('Specific course not found!');
-      res.json(changeName)
+      console.log(req.body)
+      const changePar = await Par.findByIdAndUpdate({_id: req.body._id}, {courseInfo: req.body.courseInfo}, { new: true} )
+      if (!changePar) throw Error('Specific course not found!');
+      res.json(changePar)
     } catch (e) {
       console.log(e);
-      res.send('Could not delete!')
+      res.send('Could not update!')
     }
   }
 

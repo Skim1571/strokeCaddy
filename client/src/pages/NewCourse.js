@@ -26,7 +26,6 @@ if(isSubmit){
 const handleChange = (event) => {
   const { id, value } = event.target;
   let courseUpdate = {courseName: newCourse.courseName, courseInfo: [...newCourse.courseInfo]}
-  // let holeUpdate = {courseName: newCourse.courseName, courseInfo: [...newCourse.courseInfo, update]}
   let update
   switch (id) {
     case 'courseName':
