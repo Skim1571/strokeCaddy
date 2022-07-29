@@ -52,20 +52,6 @@ const deleteCourse = async (req, res) => {
     }
   }
 
-// GET strokes
-// const getStrokes = async (req, res) => {
-// try{
-//   const strokes = await Stroke.findById(gameId);
-//   if (!strokes) throw Error('Strokes not found!');
-//   res.json(strokes);
-// } catch (e) {
-//   console.log(e);
-//   res.send('Specific Strokes not found!');
-//   }
-// }
-
-
-
   // POST create new course
 const createCourseDetails = async (req, res) => {
   const newPar = await Par.create({courseInfo: req.body.courseInfo })
@@ -91,28 +77,6 @@ const createCourseDetails = async (req, res) => {
       }
   }
 
-  // POST create stroke
-  const createStroke = async (req, res) => {
-    const newStroke = await Stroke.create({holeNum: req.body.holeNum,
-    clubUsed: req.body.clubUsed})
-    const foundGame = await Game.findById(req.body.gameId)
-    console.log(foundGame)
-    foundGame.strokes.push(newStroke._id)
-    res.json(foundGame)
-  }
-
-// PUT update an existing stroke
-const updateStroke = async (req, res) => {
-  const updateStroke = await Stroke.updateOne(req.body)
-  res.json(updateStroke)
-}
-
-//DELETE 
-const deleteStroke = async (req, res) => {
-  const removeStroke = await Stroke.deleteOne(req)
-  res.json(removeStroke)
-}
-
 module.exports = {
   getAllCourses,
   getCourseDetails,
@@ -121,5 +85,4 @@ module.exports = {
   getAllGames,
   deleteCourse,
   updateCourseDetails
-
 }

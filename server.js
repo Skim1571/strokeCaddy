@@ -24,10 +24,6 @@ app.get('/allcourses', controller.getAllCourses)
 app.get('/course/details/:courseId', controller.getCourseDetails)
 app.delete('/course/details/:courseId', controller.deleteCourse)
 app.put('/course/details/:courseId', controller.updateCourseDetails)
-// app.get('/:strokes', controller.getStrokes)
-// app.get('/newgame', controller.getAllCourses)
-// app.post('/newgame', controller.createGame)
-// app.post('/strokes', controller.createStroke)
 
 // Connection
 app.listen(PORT, () => {
