@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import InputCourse from '../components/InputCourse'
+import Input9HoleCourse from '../components/Input9HoleCourse'
 import CourseRadioButton from '../components/CourseRadioButton'
 const BASE_URL = 'http://localhost:3001'
 
@@ -31,11 +32,33 @@ const Newgame = (props) => {
   })
   const [isSubmit, setIsSubmit] = useState(false)
   const [holeSelection, setHoleSelection] = useState("18holes")
-
-let showDetails
+  const initialState = 
+{  courseName: '',
+  courseScoreCardImage: '',
+  courseInfo: [
+    {holeNum: 1, parNum: '0'},
+    {holeNum: 2, parNum: '0'},
+    {holeNum: 3, parNum: '0'},
+    {holeNum: 4, parNum: '0'},
+    {holeNum: 5, parNum: '0'},
+    {holeNum: 6, parNum: '0'},
+    {holeNum: 7, parNum: '0'},
+    {holeNum: 8, parNum: '0'},
+    {holeNum: 9, parNum: '0'},
+    {holeNum: 10, parNum: '0'},
+    {holeNum: 11, parNum: '0'},
+    {holeNum: 12, parNum: '0'},
+    {holeNum: 13, parNum: '0'},
+    {holeNum: 14, parNum: '0'},
+    {holeNum: 15, parNum: '0'},
+    {holeNum: 16, parNum: '0'},
+    {holeNum: 17, parNum: '0'},
+    {holeNum: 18, parNum: '0'}
+  ]}
+let showConfirmation
 
 if(isSubmit){
-  showDetails = <p>Course has been added</p>
+  showConfirmation = <p>Course has been added</p>
 }
 
   const postCourse = async (event) => {
@@ -132,13 +155,17 @@ const handleChange = (event) => {
       break;
     case 'holeSelection18':
       setHoleSelection(value);
+      setNewCourse(initialState)
       break;
     case 'holeSelection9':
       setHoleSelection(value);
+      setNewCourse(initialState)
       break;
     default:
   }
 };
+
+let showInput = (holeSelection === "18Holes") ? <InputCourse onChange={handleChange} onSubmit={postCourse}/> : <Input9HoleCourse onChange={handleChange} onSubmit={postCourse}/>
 
       return (
         <div className="newGameDetails">
@@ -146,8 +173,8 @@ const handleChange = (event) => {
             <h2>Input Course Information</h2>
             <CourseRadioButton holeSelection={holeSelection} onChange={handleChange}/>
           </div>
-          <InputCourse onChange={handleChange} onSubmit={postCourse}/>
-          {showDetails}
+            {showInput}
+            {showConfirmation}
         </div>
       )
   }

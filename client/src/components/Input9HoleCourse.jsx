@@ -1,4 +1,4 @@
-const Input9HoleCourse = () => {
+const Input9HoleCourse = (props) => {
 
   return (
     <form onSubmit={props.onSubmit}>
