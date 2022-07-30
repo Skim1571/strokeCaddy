@@ -5,11 +5,6 @@
   text-align: center;
 }
 
-.App {
-  display: flex;
-  height: 100%;
-}
-
 main {
   padding: 2em 0;
 }
@@ -123,6 +118,11 @@ form {
   background-color: rgb(0, 0, 0, 0);
 }
 
+input #hole2 {
+  float: left;
+}
+
+
 .newGameDetails {
   background-color: rgba(0, 0, 0, 0);
 
@@ -131,6 +131,11 @@ form {
 input {
   width: 40%;
   color: black;
+  margin: .5px;
+}
+
+input[type=text]:focus {
+  border: 1px solid rgb(231, 116, 28);
 }
 
 button {

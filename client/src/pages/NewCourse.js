@@ -1,15 +1,37 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import InputCourse from '../components/InputCourse'
+import CourseRadioButton from '../components/CourseRadioButton'
 const BASE_URL = 'http://localhost:3001'
 
 const Newgame = (props) => {
   const [newCourse, setNewCourse] = useState({
     courseName: '',
     courseScoreCardImage: '',
-    courseInfo: [,,,,,,,,,,,,,,,,,]
+    courseInfo: [
+      {holeNum: 1, parNum: '0'},
+      {holeNum: 2, parNum: '0'},
+      {holeNum: 3, parNum: '0'},
+      {holeNum: 4, parNum: '0'},
+      {holeNum: 5, parNum: '0'},
+      {holeNum: 6, parNum: '0'},
+      {holeNum: 7, parNum: '0'},
+      {holeNum: 8, parNum: '0'},
+      {holeNum: 9, parNum: '0'},
+      {holeNum: 10, parNum: '0'},
+      {holeNum: 11, parNum: '0'},
+      {holeNum: 12, parNum: '0'},
+      {holeNum: 13, parNum: '0'},
+      {holeNum: 14, parNum: '0'},
+      {holeNum: 15, parNum: '0'},
+      {holeNum: 16, parNum: '0'},
+      {holeNum: 17, parNum: '0'},
+      {holeNum: 18, parNum: '0'}
+    ]
   })
   const [isSubmit, setIsSubmit] = useState(false)
+  const [holeSelection, setHoleSelection] = useState("18holes")
+
 let showDetails
 
 if(isSubmit){
@@ -27,7 +49,6 @@ if(isSubmit){
 const handleChange = (event) => {
   const { id, value } = event.target;
   let courseUpdate = {courseName: newCourse.courseName, courseScoreCardImage: newCourse.courseScoreCardImage, courseInfo: [...newCourse.courseInfo]}
-  let update
   switch (id) {
     case 'courseName':
       courseUpdate.courseName  = value;
@@ -108,7 +129,13 @@ const handleChange = (event) => {
     case 'hole18':
       courseUpdate.courseInfo.splice(17,1,{holeNum: 18, parNum: value});
       setNewCourse(courseUpdate);
-      break;      
+      break;
+    case 'holeSelection18':
+      setHoleSelection(value);
+      break;
+    case 'holeSelection9':
+      setHoleSelection(value);
+      break;
     default:
   }
 };
@@ -117,6 +144,7 @@ const handleChange = (event) => {
         <div className="newGameDetails">
           <div >
             <h2>Input Course Information</h2>
+            <CourseRadioButton holeSelection={holeSelection} onChange={handleChange}/>
           </div>
           <InputCourse onChange={handleChange} onSubmit={postCourse}/>
           {showDetails}
