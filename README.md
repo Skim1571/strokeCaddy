@@ -61,6 +61,8 @@
 #### Image 1: http://www.golfbytourmiss.com/gbtm/wp-content/uploads/2020/04/1200px-PGA_Tour_logo.svg_.png
 
 #### Image2: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1)
+
+#### Springbrook ScoreCard: https://golfnaperville.org/wp-content/uploads/2018/10/Springbrook-Inside-scorecard.jpg
 ---
 
 Footer
