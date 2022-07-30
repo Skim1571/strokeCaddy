@@ -118,6 +118,11 @@ form {
   background-color: rgb(0, 0, 0, 0);
 }
 
+.submitbutton {
+  display: block;
+  margin: 10px auto;
+}
+
 .radio {
   display: flex;
   align-content: center;
