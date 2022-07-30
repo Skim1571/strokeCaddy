@@ -9,30 +9,11 @@ const Newgame = (props) => {
   const [newCourse, setNewCourse] = useState({
     courseName: '',
     courseScoreCardImage: '',
-    courseInfo: [
-      {holeNum: 1, parNum: '0'},
-      {holeNum: 2, parNum: '0'},
-      {holeNum: 3, parNum: '0'},
-      {holeNum: 4, parNum: '0'},
-      {holeNum: 5, parNum: '0'},
-      {holeNum: 6, parNum: '0'},
-      {holeNum: 7, parNum: '0'},
-      {holeNum: 8, parNum: '0'},
-      {holeNum: 9, parNum: '0'},
-      {holeNum: 10, parNum: '0'},
-      {holeNum: 11, parNum: '0'},
-      {holeNum: 12, parNum: '0'},
-      {holeNum: 13, parNum: '0'},
-      {holeNum: 14, parNum: '0'},
-      {holeNum: 15, parNum: '0'},
-      {holeNum: 16, parNum: '0'},
-      {holeNum: 17, parNum: '0'},
-      {holeNum: 18, parNum: '0'}
-    ]
+    courseInfo: []
   })
   const [isSubmit, setIsSubmit] = useState(false)
-  const [holeSelection, setHoleSelection] = useState("18holes")
-  const initialState = 
+  const [holeSelection, setHoleSelection] = useState("18Holes")
+  const initialState18 = 
 {  courseName: '',
   courseScoreCardImage: '',
   courseInfo: [
@@ -55,6 +36,20 @@ const Newgame = (props) => {
     {holeNum: 17, parNum: '0'},
     {holeNum: 18, parNum: '0'}
   ]}
+  const initialState9 = 
+  {  courseName: '',
+    courseScoreCardImage: '',
+    courseInfo: [
+      {holeNum: 1, parNum: '0'},
+      {holeNum: 2, parNum: '0'},
+      {holeNum: 3, parNum: '0'},
+      {holeNum: 4, parNum: '0'},
+      {holeNum: 5, parNum: '0'},
+      {holeNum: 6, parNum: '0'},
+      {holeNum: 7, parNum: '0'},
+      {holeNum: 8, parNum: '0'},
+      {holeNum: 9, parNum: '0'},
+    ]}
 let showConfirmation
 
 if(isSubmit){
@@ -155,11 +150,11 @@ const handleChange = (event) => {
       break;
     case 'holeSelection18':
       setHoleSelection(value);
-      setNewCourse(initialState)
+      setNewCourse(initialState18)
       break;
     case 'holeSelection9':
       setHoleSelection(value);
-      setNewCourse(initialState)
+      setNewCourse(initialState9)
       break;
     default:
   }
