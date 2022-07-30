@@ -6,12 +6,9 @@ import Home from './pages/Home'
 import About from './pages/About';
 import NewCourse from './pages/NewCourse'
 import CourseDetails from './pages/CourseDetails'
-import { useState } from 'react'
 import AllCourses from './pages/AllCourses'
 
 function App() {
-  const [gameData, setGameData ] = useState()
-
   return (
     <div>
             <Header />

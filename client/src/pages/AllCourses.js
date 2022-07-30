@@ -22,13 +22,6 @@ if(isSubmit){
   courseOutput = <CourseInfo courses={listCourses} />
 }
 
-  // const postCourse = async (event) => {
-  //     event.preventDefault()
-  //     await axios.post(`${BASE_URL}/newcourse`, 
-  //       newCourse
-  //     )
-  //   }
-
       return (
         <div className="allcourses">
           <div >
