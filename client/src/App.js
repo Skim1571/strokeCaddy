@@ -13,9 +13,9 @@ function App() {
   const [gameData, setGameData ] = useState()
 
   return (
-    <div className="App">
-      <main className='main'>
-      <Header />
+    <div>
+            <Header />
+      <main>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about/' element={<About />} />

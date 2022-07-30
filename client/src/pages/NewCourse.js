@@ -114,7 +114,6 @@ const handleChange = (event) => {
 };
 
       return (
-        <body>
         <div className="newGameDetails">
           <div >
             <h2>Input Course Information</h2>
@@ -122,8 +121,6 @@ const handleChange = (event) => {
           <InputCourse onChange={handleChange} onSubmit={postCourse}/>
           {showDetails}
         </div>
-        </body>
-
       )
   }
 

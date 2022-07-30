@@ -2,7 +2,6 @@ const About = () => {
   const BASE_URL = 'http://localhost:3001'
 
   return (
-    <div>
       <div className="about">
         <h2 className="title">About</h2>
         <div className="about-body">
@@ -16,7 +15,6 @@ const About = () => {
         </div>
         </div>
       </div>
-    </div>
   )
 }
 
