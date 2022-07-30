@@ -4,7 +4,7 @@
 
 ### By: Steve Kim
 
-#### [StrokeCaddy](https://thawing-harbor-79663.herokuapp.com/) | [GitHub](https://github.com/Skim1571) | [LinkedIn](https://www.linkedin.com/in/steve-kim-b641541b/) | [Trello](https://trello.com/b/c63ML0GP/stroke-caddy)
+#### [StrokeCaddy](https://strokecaddy.herokuapp.com/) | [GitHub](https://github.com/Skim1571) | [LinkedIn](https://www.linkedin.com/in/steve-kim-b641541b/) | [Trello](https://trello.com/b/c63ML0GP/stroke-caddy)
 
 ---
 
