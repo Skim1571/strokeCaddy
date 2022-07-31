@@ -18,7 +18,6 @@ const CourseDetails = () => {
   let { courseId } = useParams()
   let isDisabled = true
   
-  console.log(BASE_URL)
   useEffect(() =>  {
     const getCourseDetails = async () => {
       let res = await axios.get(`${BASE_URL}/course/details/${courseId}`)

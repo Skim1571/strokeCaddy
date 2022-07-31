@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+  const BASE_URL = (process.env.DATABASE_URL === window.location.href) ? process.env.DATABASE_URL :  `http://localhost:3001`
 
-
+  console.log(BASE_URL)
   let navigate = useNavigate()
   const createCourse = () => {
     navigate(`/newcourse`)
