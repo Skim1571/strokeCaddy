@@ -144,7 +144,7 @@ const InputCourse = (props) => {
         placeholder="Hole 18"
         onChange={(event) => props.onChange(event)}
       />
-      <button class="submitbutton" type="submit">Submit</button>
+      <button className="submitbutton" type="submit">Submit</button>
     </form>
   )
 }

@@ -3,7 +3,7 @@ import axios from 'axios'
 import CourseInfo from '../components/CourseInfo'
 const BASE_URL =  `http://localhost:3001`
 
-const AllCourses = (props) => {
+const AllCourses = () => {
   const [listCourses, setListCourses] = useState()
   const [pressedDelete, setPressedDelete] = useState(false)
   const [isSubmit, setIsSubmit] = useState(false)
