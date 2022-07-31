@@ -1,5 +1,4 @@
 const About = () => {
-  const BASE_URL = 'http://localhost:3001'
 
   return (
       <div className="about">

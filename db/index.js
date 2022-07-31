@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-let dbUrl = (process.env.NODE_ENV === 'production') ? process.env.MONGODB_URI : `mongodb+srv://skim1571:${process.env.MONGODBPASSWORD}@cluster0.rkif4yl.mongodb.net/strokeCaddy`
+let dbUrl = (process.env.NODE_ENV === 'production') ? process.env.MONGODB_URI : `${process.env.API}`
 
 
 mongoose

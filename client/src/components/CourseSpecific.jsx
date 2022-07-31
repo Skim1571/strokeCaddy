@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-const BASE_URL = 'http://localhost:3001'
+const BASE_URL = `${process.env.API}`
 
 const CourseSpecific = (props) => {
   const [newCourse, setNewCourse] = useState({

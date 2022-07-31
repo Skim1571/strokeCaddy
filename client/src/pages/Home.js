@@ -1,6 +1,4 @@
 import { useNavigate } from "react-router-dom"
-import { Link } from 'react-router-dom'
-const BASE_URL = 'http://localhost:3001'
 
 const Home = () => {
 
