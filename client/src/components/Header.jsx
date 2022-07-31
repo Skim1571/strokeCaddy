@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <div className='logo'>
-        <img src='http://www.golfbytourmiss.com/gbtm/wp-content/uploads/2020/04/1200px-PGA_Tour_logo.svg_.png' alt='pga logo' />
+        <img src='https://static.vecteezy.com/system/resources/previews/000/425/552/original/golf-icon-vector-illustration.jpg' alt='pga logo' />
       </div>
       <nav>
         <Link to="/">Home</Link>
