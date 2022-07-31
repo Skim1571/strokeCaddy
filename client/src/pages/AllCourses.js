@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import CourseInfo from '../components/CourseInfo'
-const BASE_URL = `${process.env.API}`
+const BASE_URL = `https://strokecaddy.herokuapp.com/`
 
 const AllCourses = (props) => {
   const [listCourses, setListCourses] = useState()
