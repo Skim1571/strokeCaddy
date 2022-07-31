@@ -3,7 +3,7 @@ import axios from 'axios'
 import InputCourse from '../components/InputCourse'
 import Input9HoleCourse from '../components/Input9HoleCourse'
 import CourseRadioButton from '../components/CourseRadioButton'
-const BASE_URL = 'http://localhost:3001'
+const BASE_URL = 'http://localhost:3000'
 
 const Newgame = (props) => {
   const [newCourse, setNewCourse] = useState({
