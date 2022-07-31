@@ -5,6 +5,7 @@ import CourseSpecific from '../components/CourseSpecific'
 import { useNavigate } from 'react-router-dom'
 const BASE_URL = (process.env.DATABASE_URL === window.location.href) ? process.env.DATABASE_URL :  `http://localhost:3001`
 
+
 const CourseDetails = () => {
   const [selectedCourse, setSelectedCourse] = useState(false)
   const [courseDetails, setCourseDetails] = useState()
@@ -17,6 +18,7 @@ const CourseDetails = () => {
   let { courseId } = useParams()
   let isDisabled = true
   
+  console.log(BASE_URL)
   useEffect(() =>  {
     const getCourseDetails = async () => {
       let res = await axios.get(`${BASE_URL}/course/details/${courseId}`)
