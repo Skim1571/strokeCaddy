@@ -3,7 +3,7 @@ import axios from 'axios'
 import InputCourse from '../components/InputCourse'
 import Input9HoleCourse from '../components/Input9HoleCourse'
 import CourseRadioButton from '../components/CourseRadioButton'
-const BASE_URL = `https://strokecaddy.herokuapp.com/`
+const BASE_URL = `${process.env.API}`
 
 const Newgame = (props) => {
   const [newCourse, setNewCourse] = useState({

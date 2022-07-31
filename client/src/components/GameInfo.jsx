@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-const BASE_URL = `https://strokecaddy.herokuapp.com/`
+const BASE_URL = `${process.env.API}`
 
 const GameInfo = (props) => {
   const [gameStrokeList, setGameStrokeList] = useState([])
