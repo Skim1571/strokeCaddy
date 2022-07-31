@@ -5,7 +5,7 @@ let dbUrl = (process.env.NODE_ENV === 'production') ? process.env.MONGODB_URI : 
 
 
 mongoose
-  .connect(dbUrl) // if we don't have a local database named "productsDatabase" one will be created upon a successful connection
+  .connect(dbUrl)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
