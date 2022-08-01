@@ -170,6 +170,7 @@ button {
   color: #124da5;
   cursor: pointer;
   transition: all 0.2s;
+  margin: 10px;
 }
 
 .card:hover {
