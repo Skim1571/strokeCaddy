@@ -18,7 +18,6 @@ app.use(express.static(`${__dirname}/client/build`))
 const controller = require('./controllers/controller')
 
 
-
 // Routes
 app.post('/newcourse', controller.createCourseDetails)
 app.get('/allcourses', controller.getAllCourses)

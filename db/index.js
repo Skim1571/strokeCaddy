@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-let dbUrl = process.env.MONGODB_URI
+let dbUrl = process.env.MONGODB_URL
 
 
 mongoose
