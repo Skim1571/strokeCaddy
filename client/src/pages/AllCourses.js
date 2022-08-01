@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import CourseInfo from '../components/CourseInfo'
-const BASE_URL = `http://localhost:3001`
+const BASE_URL = window.location.origin
 
 const AllCourses = () => {
   const [listCourses, setListCourses] = useState()

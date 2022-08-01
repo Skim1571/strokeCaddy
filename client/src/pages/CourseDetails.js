@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import CourseSpecific from '../components/CourseSpecific'
 import { useNavigate } from 'react-router-dom'
-const BASE_URL = `http://localhost:3001`
-
+const BASE_URL = window.location.origin
 
 const CourseDetails = () => {
   const [selectedCourse, setSelectedCourse] = useState(false)

@@ -3,9 +3,9 @@ import axios from 'axios'
 import InputCourse from '../components/InputCourse'
 import Input9HoleCourse from '../components/Input9HoleCourse'
 import CourseRadioButton from '../components/CourseRadioButton'
-const BASE_URL = `http://localhost:3001`
+const BASE_URL = window.location.origin
 
-const Newgame = (props) => {
+const Newgame = () => {
   const [newCourse, setNewCourse] = useState({
     courseName: '',
     courseScoreCardImage: '',
@@ -160,7 +160,7 @@ const handleChange = (event) => {
   }
 };
 
-let showInput = (holeSelection === "18Holes") ? <InputCourse onChange={handleChange} onSubmit={postCourse}/> : <Input9HoleCourse onChange={handleChange} onSubmit={postCourse}/>
+let showInput = (holeSelection === "18Holes") ? <InputCourse  onChange={handleChange} onSubmit={postCourse}/> : <Input9HoleCourse onChange={handleChange} onSubmit={postCourse}/>
 
       return (
         <div className="newGameDetails">
