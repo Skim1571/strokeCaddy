@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import CourseInfo from '../components/CourseInfo'
-const BASE_URL = (process.env.DATABASE_URL === window.location.href) ? process.env.DATABASE_URL :  `http://localhost:3001`
+const BASE_URL = `http://localhost:3001`
 
 const AllCourses = () => {
   const [listCourses, setListCourses] = useState()
