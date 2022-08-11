@@ -42,11 +42,8 @@
 #### Image 1
 ![Golf Logo](https://static.vecteezy.com/system/resources/previews/000/425/552/original/golf-icon-vector-illustration.jpg)
 
-#### Image2
-![Background_Img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uPnf0rumaqlac5Ar4F9fIQHaEK%26pid%3DApi&f=1)
-
-#### Image 3
-![HomePage](/home/steve/ga_seir/projects/strokeCaddy/images/Stroke_Caddy.png)
+#### Image 2
+![HomePage](./images/Stroke_Caddy.png)
 
 ---
 
